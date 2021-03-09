@@ -6,6 +6,7 @@
 package calculoarea;
 
 
+
 /**
  *
  * @author Chris
@@ -30,7 +31,7 @@ public class CalculoAreaFrame extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btn_rectangulo = new javax.swing.JButton();
+        btn_triangulo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,11 +41,12 @@ public class CalculoAreaFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Seleccione la figura que quiere calcular:");
 
-        btn_rectangulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_rectangulo.setText("Rectángulo");
-        btn_rectangulo.addActionListener(new java.awt.event.ActionListener() {
+        btn_triangulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_triangulo.setText("Tríangulo");
+        btn_triangulo.setActionCommand("Triángulo");
+        btn_triangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_rectanguloActionPerformed(evt);
+                btn_trianguloActionPerformed(evt);
             }
         });
 
@@ -64,7 +66,7 @@ public class CalculoAreaFrame extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(61, 61, 61)
-                    .addComponent(btn_rectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_triangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(618, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -78,18 +80,18 @@ public class CalculoAreaFrame extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(138, 138, 138)
-                    .addComponent(btn_rectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_triangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(313, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_rectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rectanguloActionPerformed
-        RectanguloFrame rect = new RectanguloFrame();
+    private void btn_trianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_trianguloActionPerformed
+        TrianguloFrame rect = new TrianguloFrame();
         rect.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_btn_rectanguloActionPerformed
+    }//GEN-LAST:event_btn_trianguloActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,7 +129,7 @@ public class CalculoAreaFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_rectangulo;
+    private javax.swing.JButton btn_triangulo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
